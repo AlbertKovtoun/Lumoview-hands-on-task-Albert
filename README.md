@@ -1,1 +1,4 @@
-# Lumoview-hands-on-task-Albert
+# Lumoview hands-on task Albert
+
+Made with Vite + React + R3F
+
