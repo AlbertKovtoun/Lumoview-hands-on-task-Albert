@@ -1,7 +1,6 @@
 import { Canvas } from "@react-three/fiber"
 import { CameraControls } from "@react-three/drei"
 import { Panorama } from "./Panorama"
-import { BlurredFaces } from "./BlurredFaces"
 
 export function Experience() {
   return (
@@ -13,7 +12,6 @@ export function Experience() {
 
         <Panorama />
 
-        <BlurredFaces />
       </Canvas>
     </div>
   )
