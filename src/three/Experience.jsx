@@ -1,21 +1,19 @@
 import { Canvas } from "@react-three/fiber"
-import { OrbitControls, CameraControls } from "@react-three/drei"
+import { CameraControls } from "@react-three/drei"
+import { Panorama } from "./Panorama"
+import { BlurredFaces } from "./BlurredFaces"
 
 export function Experience() {
   return (
     <div className="webgl">
-      <Canvas flat camera={{ position: [2, 0, 2], fov: 50 }}>
+      <Canvas flat camera={{ position: [-5, 0, 5], fov: 50 }}>
         <color attach="background" args={["#e5ece8"]} />
 
-        {/* <OrbitControls makeDefault /> */}
-        <CameraControls makeDefault />
+        <CameraControls maxDistance={20} />
 
-        <ambientLight intensity={0.2} />
-        <directionalLight color="white" position={[0, 0, 5]} />
-        <mesh>
-          <boxGeometry />
-          <meshStandardMaterial color={"red"} />
-        </mesh>
+        <Panorama />
+
+        <BlurredFaces />
       </Canvas>
     </div>
   )
